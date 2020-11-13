@@ -1,0 +1,30 @@
+.fieldWrapper {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.field {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: var(--mainDark);
+  font-size: 16px;
+  line-height: 16px;
+  outline: none;
+  padding: 7px 15px 8px;
+  transition: border 0.3s;
+  width: 100%;
+
+  &:not(.dark) {
+    background: #fff !important;
+    color: var(--mainDark) !important;
+  }
+
+  &:focus {
+    border-color: var(--mainBlue);
+    box-shadow: none;
+    outline: none;
+  }
+}

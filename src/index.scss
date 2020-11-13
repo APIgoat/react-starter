@@ -1,0 +1,131 @@
+:root {
+  --lightBlue: #0099ff;
+  --mainBlue: #0070bb;
+  --mainBlueHover: #015d9a;
+
+  --bgDark: #313642;
+  --mainDark: #262d35;
+  --accentDark: #3c414f;
+
+  --transitionTime: 0.3s;
+  --borderRadius: 3px;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  background: #313642;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 395px;
+}
+
+body * {
+  /*font-family: "Baloo Thambi 2", sans-serif;*/
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+body,
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+#root,
+.app {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 16px;
+}
+
+.message {
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 16px;
+}
+
+.content {
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-height: 450px) {
+    height: auto;
+  }
+}
+
+.header {
+  flex-grow: 0;
+  flex-shrink: 1;
+  padding: 10px 20px;
+  background: var(--mainDark);
+  border-bottom: 1px solid var(--accentDark);
+  display: flex;
+  align-items: center;
+}
+
+.header a {
+  color: #0072ff;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.logout {
+  margin-left: auto;
+  border: none;
+  background: none;
+  color: var(--mainBlue);
+  display: block;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--lightBlue);
+  }
+}
+.header a:hover {
+  color: #8a0f53;
+}
+.header small {
+  color: #666;
+}
+.header .active {
+  color: #2c7613;
+}
