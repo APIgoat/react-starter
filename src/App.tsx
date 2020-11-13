@@ -13,7 +13,6 @@ import Login from "./views/Login";
 
 const App = () => {
   const [authLoading, setAuthLoading] = useState(true);
-  const [forceUpdate, setForceUpdate] = useState(false);
   const currentUser = getUser();
 
   useEffect(() => {
@@ -34,24 +33,6 @@ const App = () => {
       });
   }, []);
 
-  useEffect(() => {
-    const token = getToken();
-    if (!token) {
-      return;
-    }
-
-    axios
-      .get("ApiGoat/account")
-      .then((response) => {
-        setUserSession(token, response.data.user);
-        setAuthLoading(false);
-      })
-      .catch((error) => {
-        removeUserSession();
-        setAuthLoading(false);
-      });
-  }, [forceUpdate]);
-
   if (authLoading && getToken()) {
     return (
       <div className="projects-loading">
@@ -63,7 +44,7 @@ const App = () => {
   const handleLogout = () => {
     delete axios.defaults.headers.common["Authorization"];
     removeUserSession();
-    setForceUpdate(!forceUpdate);
+    window.location.href = "/";
   };
 
   return (
