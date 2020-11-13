@@ -13,9 +13,9 @@ interface Props {
 
 const ForgottenPassword: FC<Props> = ({ goBackToLogin }) => {
   const [loading, setLoading] = useState(false);
-  const username = useFormInput("");
   const [error, setError] = useState<any>(null);
   const [message, setMessage] = useState<any>(null);
+  const username = useFormInput("");
 
   const handleForgottenPwd = (e: any) => {
     e.preventDefault();

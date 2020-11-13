@@ -16,9 +16,9 @@ const ResetPassword = (props: any) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
   const [message, setMessage] = useState<any>(null);
+  const [validationKey, setValidationKey] = useState(false);
   const password = useFormInput("");
   const confirmPassword = useFormInput("");
-  const [validationKey, setValidationKey] = useState(false);
 
   const updateAuthy = (user: any) => {
     setError(null);

@@ -16,11 +16,11 @@ interface Props {
 
 const SignIn: FC<Props> = ({ goBackToLogin }) => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<any>(null);
+  const [message, setMessage] = useState<any>(null);
   const username = useFormInput("");
   const password = useFormInput("");
   const confirmPassword = useFormInput("");
-  const [error, setError] = useState<any>(null);
-  const [message, setMessage] = useState<any>(null);
 
   const validateRegister = () => {
     if (password.value !== confirmPassword.value) {

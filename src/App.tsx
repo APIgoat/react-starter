@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.scss";
 import ConfirmEmail from "./components/Account/ConfirmEmail";
-import OAuthCallback from "./components/Account/OAuthCallback";
 import ResetPassword from "./components/Account/ResetPassword";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
@@ -86,7 +85,6 @@ const App = () => {
         )}
         <Router>
           <Switch>
-            <PublicRoute path="/oauth/callback" component={OAuthCallback} />
             <PublicRoute path="/reset-password" component={ResetPassword} />
             <PublicRoute path="/confirm" component={ConfirmEmail} />
             <PublicRoute path="/login" component={Login} />

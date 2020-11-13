@@ -15,9 +15,9 @@ interface Props {
 
 const LoginForm: FC<Props> = ({ showForgottenPassword }) => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<any>(null);
   const username = useFormInput("");
   const password = useFormInput("");
-  const [error, setError] = useState<any>(null);
 
   // handle button click of login form
   const handleLogin = (e: any) => {
