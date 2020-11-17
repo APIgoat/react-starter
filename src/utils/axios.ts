@@ -5,7 +5,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 const instance = axios.create({
   baseURL:
-    'https://x.apigoat.com/p/test_max/',
+    'https://x.apigoat.com/p/test_max/api/v1/',
   headers: {
     common: {
       'Content-type': 'application/json',
